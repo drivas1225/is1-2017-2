@@ -40,6 +40,11 @@ public class AlumnoController {
     model.addAttribute("title", "Nuevo Alumno");
     return "alumno/editar";
   }
+  
+  @RequestMapping("/busqueda")
+  public String iniciarBusqueda() {
+    return "alumno/cursem";
+  }
 
   @RequestMapping(value = "/save", method = RequestMethod.POST)
   public String saveAlumno(@ModelAttribute Alumno alumnoChanged, ModelMap model) {
