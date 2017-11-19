@@ -1,8 +1,15 @@
 package domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
 public class Matricula implements BaseEntity<Long> {
+	@Id
 	private Long id;
 
+	@OneToMany(mappedBy = "matricula")
 	private Curso curso;
 
 	private Alumno alumno;

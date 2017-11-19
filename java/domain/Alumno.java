@@ -1,12 +1,24 @@
 package domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "alumnos")
 public class Alumno implements BaseEntity<Long> {
+	@Id
+	@Column(length = 16)
 	private Long id;
 
+	@Column(name = "nombre", length = 128, nullable = false)
 	private String nombres;
 	
+	@Column(name = "ap_pat", length = 128, nullable = false)
 	private String apellidoPaterno;
-
+	
+	@Column(name = "ap_mat", length = 128, nullable = false)
 	private String apellidoMaterno;
 
 	@Override
