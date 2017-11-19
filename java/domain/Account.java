@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tbl_account", indexes = { @Index(columnList = "number") })
-public class Account implements BaseEntity<Long> {
+public class Account  {
 
 	@Id
 	private Long id;
@@ -48,12 +48,10 @@ public class Account implements BaseEntity<Long> {
 		this.balance = balance;
 	}
 
-	@Override
+
 	public Long getId() {
 		return id;
 	}
-
-	@Override
 	public void setId(Long id) {
 		this.id = id;
 	}

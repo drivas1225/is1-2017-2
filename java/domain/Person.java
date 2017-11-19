@@ -12,7 +12,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-public class Person implements BaseEntity<Long> {
+public class Person  {
 
 	@Id
 	private Long id;
@@ -27,12 +27,11 @@ public class Person implements BaseEntity<Long> {
     @JoinTable(name="person_account")
 	private Collection<Account> accounts;
 
-	@Override
+
 	public Long getId() {
 		return id;
 	}
 
-	@Override
 	public void setId(Long id) {
 		this.id = id;
 	}

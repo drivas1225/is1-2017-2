@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "alumnos")
-public class Alumno implements BaseEntity<Long> {
+public class Alumno  {
 	@Id
 	@Column(length = 16)
 	private Long id;
@@ -21,12 +21,11 @@ public class Alumno implements BaseEntity<Long> {
 	@Column(name = "ap_mat", length = 128, nullable = false)
 	private String apellidoMaterno;
 
-	@Override
+	
 	public Long getId() {
 		return id;
 	}
 
-	@Override
 	public void setId(Long id) {
 		this.id = id;
 	}

@@ -12,7 +12,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-public class Curso implements BaseEntity<Long> {
+public class Curso  {
 	@Id
 	private Long id;
 	
@@ -32,12 +32,12 @@ public class Curso implements BaseEntity<Long> {
 		          referencedColumnName = "codigo"))
 	private List<Curso> prerequisitos;
 
-	@Override
+	
 	public Long getId() {
 		return id;
 	}
 
-	@Override
+	
 	public void setId(Long id) {
 		this.id = id;
 	}

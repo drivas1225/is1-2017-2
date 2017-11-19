@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Matricula implements BaseEntity<Long> {
+public class Matricula {
 	@Id
 	private Long id;
 
@@ -18,12 +18,12 @@ public class Matricula implements BaseEntity<Long> {
 
 	private String semestre;
 
-	@Override
+	
 	public Long getId() {
 		return id;
 	}
 
-	@Override
+	
 	public void setId(Long id) {
 		this.id = id;
 	}

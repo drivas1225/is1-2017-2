@@ -13,7 +13,7 @@ import javax.persistence.SequenceGenerator;
 
 
 @Entity
-public class Operation implements BaseEntity<Long> {
+public class Operation{
 	public enum Type {
 		WITHDRAW, DEPOSIT, TRANSFER
 	}
@@ -32,12 +32,12 @@ public class Operation implements BaseEntity<Long> {
 	@ManyToOne
 	private Account targetAccount;
 
-	@Override
+
 	public Long getId() {
 		return id;
 	}
 
-	@Override
+
 	public void setId(Long id) {
 		this.id = id;
 	}
